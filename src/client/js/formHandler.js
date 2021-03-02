@@ -1,14 +1,13 @@
 const submit = document.querySelector('button');
+const urlText = document.querySelector('#url');
 submit.addEventListener('click', (event) => {
     event.preventDefault();
     console.log('i am being clicked');
-    postData({item: 'House'}).then((res) => console.log(res));
+    const articleURL = {url : urlText.value};
+    postData('/process-url', articleURL).then((res) => console.log(res));
 })
 
-
-const postData = async(data) => {
-
-    const url = '/process-url'
+const postData = async(url, data) => {
 
     const response = await fetch(url, {
         method: 'POST',
