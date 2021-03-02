@@ -70,7 +70,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \**************************************/
 /***/ (() => {
 
-eval("const submit = document.querySelector('button');\r\nsubmit.addEventListener('click', (event) => {\r\n    event.preventDefault();\r\n    console.log('i am being clicked');\r\n    postData({item: 'House'}).then((res) => console.log(res));\r\n})\r\n\r\n\r\nconst postData = async(data) => {\r\n\r\n    const url = '/nlp'\r\n\r\n    const response = await fetch(url, {\r\n        method: 'POST',\r\n        headers:{\r\n            'content-type':'application/json'\r\n        },\r\n        body: JSON.stringify(data)\r\n    });\r\n\r\n    try{\r\n        const newData = await response.json();\r\n        return newData;\r\n    }catch(error){\r\n        console.log(error);\r\n    }\r\n}\n\n//# sourceURL=webpack://natural-language-processor/./src/client/js/formHandler.js?");
+eval("const submit = document.querySelector('button');\r\nsubmit.addEventListener('click', (event) => {\r\n    event.preventDefault();\r\n    console.log('i am being clicked');\r\n    postData({item: 'House'}).then((res) => console.log(res));\r\n})\r\n\r\n\r\nconst postData = async(data) => {\r\n\r\n    const url = '/process-url'\r\n\r\n    const response = await fetch(url, {\r\n        method: 'POST',\r\n        headers:{\r\n            'content-type':'application/json'\r\n        },\r\n        body: JSON.stringify(data)\r\n    });\r\n\r\n    try{\r\n        const newData = await response.json();\r\n        return newData;\r\n    }catch(error){\r\n        console.log(error);\r\n    }\r\n}\n\n//# sourceURL=webpack://natural-language-processor/./src/client/js/formHandler.js?");
 
 /***/ })
 

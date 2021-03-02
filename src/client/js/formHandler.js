@@ -8,7 +8,7 @@ submit.addEventListener('click', (event) => {
 
 const postData = async(data) => {
 
-    const url = '/nlp'
+    const url = '/process-url'
 
     const response = await fetch(url, {
         method: 'POST',
