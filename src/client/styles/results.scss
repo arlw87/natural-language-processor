@@ -1,3 +1,20 @@
 #results {
-  border: 1px blue solid;
+  // border: 1px blue solid;
+  width: 55%;
+  height: 40%;
+  text-align: justify;
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // border: 1px green solid;
+
+  p {
+    margin: 0;
+
+    span {
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  }
 }

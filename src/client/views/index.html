@@ -11,29 +11,26 @@
         <header>
         </header>
         <main>
-            <section>
-                <h1>Natural Language Processor</h1>
-                <div class="content-wrapper">
+                <section>
+                    <div class="text-wrapper">
+                        <h1>Natural Language Processor</h1>
+                        <h2>Type in a url of an article or text to analysis it</h2>
+                    </div>
                     <form>
                         <input type="text" id="url" placeholder="enter url">
                         <button id="submit">Submit</button>
                     </form> 
                     <div id="results">
-                        <p id="confidence">Confidence: </p>
-                        <p id="subject">subjectivity: </p>
-                        <p id="scoreTag">scoreTag: </p>
+                        <p id="text-results">The Analysed Text is <span>Subjective</span> and is written in a <span>Positive</span> way. The confidence of this analysis is <span>86%</span>. </p>
                     </div>
-                </div>
-            </section>
+                </section>
         </main>
         <footer>
+            <h3>A website by Andrew White. Using the ... API</h3>
         </footer>
         <script>
-            console.log('service worker code');
             if ('serviceWorker' in navigator){
-                console.log('hello inside service worker code');
                 window.addEventListener('load', ()=>{
-                    console.log('service worker code');
                     navigator.serviceWorker.register('./service-worker.js');
                 });
             }

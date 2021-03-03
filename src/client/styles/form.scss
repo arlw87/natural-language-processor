@@ -1,3 +1,20 @@
 form {
-  border: 1px red solid;
+  // border: 1px red solid;
+  // height: 20%;
+  // display: flex;
+  // align-items: flex-start;
+  // border: 1px blue solid;
+  margin: 30px 0 auto 0;
+
+  input {
+    font-size: 2em;
+  }
+
+  button {
+    font-size: 2em;
+
+    &:hover {
+      background-color: aquamarine;
+    }
+  }
 }
