@@ -1,29 +1,8 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Natural Language Processor</title>
-        <meta charset="utf-8">
-        <meta name = "viewport" content="width=device-width, initial-scale=1">
-    <script defer src="main.js"></script></head>
-    <body>
-        <header>
-        </header>
-        <main>
-            <h1>Natural Language Processor</h1>
-            <section>
-                    <form>
-                        <input type="text" id="url" placeholder="enter url">
-                        <button id="submit">Submit</button>
-                    </form> 
-                    <div id="results">
-                        <p id="confidence">Confidence: </p>
-                        <p id="subject">subjectivity: </p>
-                        <p id="scoreTag">scoreTag: </p>
-                    </div>
-            </section>
-        </main>
-        <footer>
-        </footer>
-    </body>
-    <script type="module" src="app.js"></script>
-</html>
+<!doctype html><html><head><title>Natural Language Processor</title><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Parisienne&family=Sacramento&display=swap" rel="stylesheet"><script defer="defer" src="main.js"></script><link href="main.css" rel="stylesheet"></head><body><header></header><main><section><h1>Natural Language Processor</h1><div class="content-wrapper"><form><input id="url" placeholder="enter url"> <button id="submit">Submit</button></form><div id="results"><p id="confidence">Confidence:</p><p id="subject">subjectivity:</p><p id="scoreTag">scoreTag:</p></div></div></section></main><footer></footer><script>console.log('service worker code');
+            if ('serviceWorker' in navigator){
+                console.log('hello inside service worker code');
+                window.addEventListener('load', ()=>{
+                    console.log('service worker code');
+                    navigator.serviceWorker.register('./service-worker.js');
+                });
+            }</script></body><script type="module" src="app.js"></script></html>

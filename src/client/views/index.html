@@ -28,6 +28,16 @@
         </main>
         <footer>
         </footer>
+        <script>
+            console.log('service worker code');
+            if ('serviceWorker' in navigator){
+                console.log('hello inside service worker code');
+                window.addEventListener('load', ()=>{
+                    console.log('service worker code');
+                    navigator.serviceWorker.register('./service-worker.js');
+                });
+            }
+        </script>
     </body>
     <script type="module" src="app.js"></script>
 </html>
