@@ -1,11 +1,32 @@
+@import "base.scss";
+
 footer {
-  height: 5%;
+  height: 8%;
   background-color: rgb(0, 0, 0);
   display: flex;
-  justify-content: center;
   align-items: center;
+  font-size: 0.8em;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
 
   h3 {
     color: #fff;
+    width: 95%;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 1.3em;
   }
 }
+
+// @media (min-width: $tablet) {
+//   footer {
+//     font-size: 1.3em;
+//   }
+// }
