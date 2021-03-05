@@ -1,7 +1,7 @@
 @import "base.scss";
 
 #results {
-  margin-top: 15%;
+  margin-top: 10%;
   // border: 1px blue solid;
   width: 95%;
   //height: 40%;
@@ -26,7 +26,8 @@
     font-size: 2.5em;
   }
 
-  p {
+  .text-results {
+    display: none;
     margin: 0;
 
     span {
@@ -35,4 +36,32 @@
       color: $accent-color;
     }
   }
+}
+
+.loader {
+  display: none;
+  margin: 0 auto;
+  border: 16px solid #fff; /* Light grey */
+  border-top: 16px solid $accent-color; /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.display {
+  display: inline-block;
+}
+
+.non-display {
+  display: none;
 }

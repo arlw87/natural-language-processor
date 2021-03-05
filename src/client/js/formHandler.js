@@ -7,9 +7,13 @@ const urlText = document.querySelector('#url');
 const confidenceText = document.querySelector('#confidence');
 const subjectivityText = document.querySelector('#subject');
 const scoreTagText = document.querySelector('#scoreTag');
+const loader = document.querySelector('.loader');
+const resultsText = document.querySelector('.text-results');
 
 submit.addEventListener('click', (event) => {
     event.preventDefault();
+    loader.classList.add('display');
+    resultsText.style.cssText='display:none;';
     console.log('i am being clicked');
     const articleURL = {url : urlText.value};
     console.log(`${urlText.value}-`);
@@ -52,12 +56,16 @@ const updateUI = (data)=>{
     } else {
         //data has been returned update the UI
         try{
+            console.log('im here');
             const {confidence, scoreTag, subjectivity} = data;
-            confidenceText.innerHTML = `Confidence: ${confidence}`;
-            scoreTagText.innerHTML = `scoreTag: ${scoreTag}`;
-            subjectivityText.innerHTML = `subjectivity: ${subjectivity}`;
-            console.log("123");
-            console.log(subjectivity);
+            confidenceText.innerHTML = `${confidence}`;
+            scoreTagText.innerHTML = `${scoreTag}`;
+            subjectivityText.innerHTML = `${subjectivity}`;
+            // console.log("123");
+            // console.log(subjectivity);
+            loader.classList.remove('display');
+            resultsText.style.cssText='display:inline-block;';
+
         }catch(error){
             throw error('Cant update UI')
         }
