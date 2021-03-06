@@ -48,21 +48,16 @@ const postData = async(url, data) => {
 }
 
 const updateUI = (data)=>{
-    console.log("in update ui");
-    console.log(data);
     //check the data returned is good
     if (data.status !== 'complete'){
         //display a not data returned please try again
     } else {
         //data has been returned update the UI
         try{
-            console.log('im here');
             const {confidence, scoreTag, subjectivity} = data;
             confidenceText.innerHTML = `${confidence}`;
-            scoreTagText.innerHTML = `${scoreTag}`;
-            subjectivityText.innerHTML = `${subjectivity}`;
-            // console.log("123");
-            // console.log(subjectivity);
+            scoreTagText.innerHTML = `${scoreTagVerbose(scoreTag)}`;
+            subjectivityText.innerHTML = `${subjectivity.toLowerCase()}`;
             loader.classList.remove('display');
             resultsText.style.cssText='display:inline-block;';
 
@@ -70,6 +65,23 @@ const updateUI = (data)=>{
             throw error('Cant update UI')
         }
     }
+}
 
-
+const scoreTagVerbose = (scoreTag) => {
+    switch(scoreTag){
+        case 'P+':
+            return 'strong positive';
+        case 'P': 
+            return 'positive';
+        case 'NEU':
+            return 'neutral';
+        case 'N':
+            return 'negative';
+        case 'N+':
+            return 'strong negative';
+        case 'NONE':
+            return 'without sentiment'
+        default: 
+            return 'unknown';
+    }
 }
