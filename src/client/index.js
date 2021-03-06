@@ -9,6 +9,6 @@ import './styles/header.scss';
 
 //import js
 import './js/formHandler';
-import './js/urlChecker';
+import './js/urlCheck';
 
 

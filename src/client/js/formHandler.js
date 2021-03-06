@@ -27,7 +27,7 @@ submit.addEventListener('click', (event) => {
     //check the url is valid
     if (!urlCheck(urlText.value)){
         //display error
-        displayError("invalid url");
+        displayError("Error: invalid url");
         //exit function
         return;
     }
@@ -119,7 +119,7 @@ const scoreTagVerbose = (scoreTag) => {
  * @param {string} message 
  */
 const displayError = (message) => {
-    errorSection.innerHTML = `<p>There has been an error: ${message}, please try again</p>`
+    errorSection.innerHTML = `<p>${message}, please try again</p>`
     loader.classList.remove('display');
     errorSection.classList.add('display');
 }
