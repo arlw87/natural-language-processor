@@ -2,8 +2,9 @@
 import { urlCheck } from './urlCheck';
 
 //hack to get around the jest testing issues of not having access to the DOM
-window.addEventListener('onload', ()=>{
+// document.addEventListener('onload', ()=>{
     
+    console.log('i have loaded');
     //get elements
     const submit = document.querySelector('button');
     const urlText = document.querySelector('#url');
@@ -116,7 +117,7 @@ window.addEventListener('onload', ()=>{
         }
     }
 
-});
+// });
 
 /**
      * Turn the MeaningCloud shorthand tag code from the API response and 
