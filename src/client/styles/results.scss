@@ -2,28 +2,26 @@
 
 #results {
   margin-top: 10%;
-  // border: 1px blue solid;
   width: 95%;
-  //height: 40%;
   text-align: justify;
-  font-size: 1.5em;
+  font-size: 2em;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   @media (min-width: $tablet) {
     margin-top: 8%;
-    font-size: 2em;
+    font-size: 2.5em;
   }
 
   @media (min-width: $small-laptop) {
     margin-top: 8%;
-    font-size: 2em;
+    font-size: 3em;
     width: 80%;
   }
 
   @media (min-width: $medium-laptop) {
-    font-size: 2.5em;
+    font-size: 3.5em;
   }
 
   .text-results {
@@ -59,13 +57,18 @@
 }
 
 .error {
+  display: none;
   width: 80;
   text-align: center;
   border: 3px red solid;
   background-color: rgb(230, 98, 98);
   border-radius: 10px;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.3em;
+
+  p {
+    margin: 10px;
+  }
 }
 
 .display {
