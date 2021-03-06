@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name = "viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Parisienne&family=Sacramento&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -14,7 +14,7 @@
                 <section>
                     <div class="text-wrapper">
                         <h1>Natural Language Processor</h1>
-                        <h2>Type in a url of an article or text to analysis it</h2>
+                        <h2>Type in a url of an article or text to analysis</h2>
                     </div>
                     <form>
                         <input type="text" id="url" placeholder="Enter URL">
@@ -23,6 +23,9 @@
                     <div id="results">
                         <p class="text-results">The Analysed Text is <span id='subject'></span> and is written in a <span id='scoreTag'></span> way. The confidence of this analysis is <span id='confidence'></span>%. </p>
                         <div class="loader">
+                        </div>
+                        <div class="error">
+                            <p>There was an error</p>
                         </div>
                     </div>
                 </section>

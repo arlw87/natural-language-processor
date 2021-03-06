@@ -58,6 +58,16 @@
   }
 }
 
+.error {
+  width: 80;
+  text-align: center;
+  border: 3px red solid;
+  background-color: rgb(230, 98, 98);
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
 .display {
   display: inline-block;
 }
