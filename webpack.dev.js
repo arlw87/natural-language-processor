@@ -7,7 +7,8 @@ module.exports = {
     entry: './src/client/index.js',
     mode: 'development',
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        libraryTarget: 'var',
+        library: 'Client',
       },
     module: {
         rules:[

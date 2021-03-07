@@ -18,7 +18,8 @@
                     </div>
                     <form>
                         <input type="text" id="url" placeholder="Enter URL">
-                        <button id="submit">Analyse</button>
+                        <input type="submit" id="submit" value="Analyse" onclick="return Client.submitHandler(event)"
+                        onsubmit="Client.submitHandler"></input>
                     </form> 
                     <div id="results">
                         <p class="text-results">The Analysed Text is <span id='subject'></span> and is written in a <span id='scoreTag'></span> way. The confidence of this analysis is <span id='confidence'></span>%. </p>
@@ -41,5 +42,4 @@
             }
         </script>
     </body>
-    <script type="module" src="app.js"></script>
 </html>
